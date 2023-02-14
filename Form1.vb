@@ -7,9 +7,6 @@
 
     Private Sub btnCalc_Click_1(sender As Object, e As EventArgs) Handles btnCalc.Click
         ' Clear the previous percentages
-        txtJimPerc.Text = ""
-        txtDavePerc.Text = ""
-        txtRobPerc.Text = ""
         txtJimSales.BackColor = SystemColors.Window
         txtJimPerc.BackColor = SystemColors.Window
         txtDaveSales.BackColor = SystemColors.Window
@@ -148,9 +145,5 @@
     End Sub
 
 End Class
-
-
-
-
 
 
