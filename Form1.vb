@@ -24,6 +24,9 @@
         Dim highestPercentage As Double = 0
         Dim highestSalesperson As String = String.Empty
         Dim tiedPercentage As Boolean = False
+        ' Initialize max sales and the highest salesperson
+        Dim maxSales As Decimal = 0
+
 
         ' Get sales input from text boxes
         Double.TryParse(txtJimSales.Text, jimSales)
@@ -122,12 +125,24 @@
         If highestSalesperson = "Jim" Then
             txtJimSales.BackColor = Color.Yellow
             txtJimPerc.BackColor = Color.Yellow
+            txtDaveSales.BackColor = SystemColors.Control
+            txtDavePerc.BackColor = SystemColors.Control
+            txtRobSales.BackColor = SystemColors.Control
+            txtRobPerc.BackColor = SystemColors.Control
         ElseIf highestSalesperson = "Dave" Then
             txtDaveSales.BackColor = Color.Yellow
             txtDavePerc.BackColor = Color.Yellow
+            txtJimSales.BackColor = SystemColors.Control
+            txtJimPerc.BackColor = SystemColors.Control
+            txtRobSales.BackColor = SystemColors.Control
+            txtRobPerc.BackColor = SystemColors.Control
         ElseIf highestSalesperson = "Rob" Then
             txtRobSales.BackColor = Color.Yellow
             txtRobPerc.BackColor = Color.Yellow
+            txtJimSales.BackColor = SystemColors.Control
+            txtJimPerc.BackColor = SystemColors.Control
+            txtDaveSales.BackColor = SystemColors.Control
+            txtDavePerc.BackColor = SystemColors.Control
         End If
 
     End Sub
