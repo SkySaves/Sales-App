@@ -25,10 +25,10 @@ Partial Class MainForm
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtJimSales = New System.Windows.Forms.TextBox()
-        Me.txtDaveSales = New System.Windows.Forms.TextBox()
+        Me.txtSkySales = New System.Windows.Forms.TextBox()
         Me.txtRobSales = New System.Windows.Forms.TextBox()
         Me.txtJimPerc = New System.Windows.Forms.TextBox()
-        Me.txtDavePerc = New System.Windows.Forms.TextBox()
+        Me.txtSkyPerc = New System.Windows.Forms.TextBox()
         Me.txtRobPerc = New System.Windows.Forms.TextBox()
         Me.btnCalc = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
@@ -53,36 +53,36 @@ Partial Class MainForm
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblJimApr = New System.Windows.Forms.Label()
+        Me.lblJimMar = New System.Windows.Forms.Label()
+        Me.lblJimFeb = New System.Windows.Forms.Label()
+        Me.lblJimJan = New System.Windows.Forms.Label()
         Me.txtJimFeb = New System.Windows.Forms.TextBox()
-        Me.grpDave = New System.Windows.Forms.GroupBox()
+        Me.grpSky = New System.Windows.Forms.GroupBox()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.txtDaveMay = New System.Windows.Forms.TextBox()
+        Me.txtSkyMay = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.txtDaveAug = New System.Windows.Forms.TextBox()
+        Me.txtSkyAug = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.txtDaveOct = New System.Windows.Forms.TextBox()
+        Me.txtSkyOct = New System.Windows.Forms.TextBox()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.txtDaveJul = New System.Windows.Forms.TextBox()
+        Me.txtSkyJul = New System.Windows.Forms.TextBox()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.txtDaveApr = New System.Windows.Forms.TextBox()
+        Me.txtSkyApr = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
-        Me.txtDaveJun = New System.Windows.Forms.TextBox()
+        Me.txtSkyJun = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.txtDaveMar = New System.Windows.Forms.TextBox()
+        Me.txtSkyMar = New System.Windows.Forms.TextBox()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.txtDaveSep = New System.Windows.Forms.TextBox()
+        Me.txtSkySep = New System.Windows.Forms.TextBox()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.txtDaveJan = New System.Windows.Forms.TextBox()
+        Me.txtSkyJan = New System.Windows.Forms.TextBox()
         Me.Label36 = New System.Windows.Forms.Label()
-        Me.txtDaveDec = New System.Windows.Forms.TextBox()
+        Me.txtSkyDec = New System.Windows.Forms.TextBox()
         Me.Label37 = New System.Windows.Forms.Label()
-        Me.txtDaveNov = New System.Windows.Forms.TextBox()
+        Me.txtSkyNov = New System.Windows.Forms.TextBox()
         Me.Label38 = New System.Windows.Forms.Label()
-        Me.txtDaveFeb = New System.Windows.Forms.TextBox()
+        Me.txtSkyFeb = New System.Windows.Forms.TextBox()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.grpRob = New System.Windows.Forms.GroupBox()
         Me.Label40 = New System.Windows.Forms.Label()
@@ -115,21 +115,23 @@ Partial Class MainForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtResults = New System.Windows.Forms.TextBox()
+        Me.txtTotalSales = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtDaveHighestSales = New System.Windows.Forms.TextBox()
-        Me.txtDaveLowestSales = New System.Windows.Forms.TextBox()
+        Me.txtSkyHighestSales = New System.Windows.Forms.TextBox()
+        Me.txtSkyLowestSales = New System.Windows.Forms.TextBox()
         Me.txtRobHighestSales = New System.Windows.Forms.TextBox()
         Me.txtRobLowestSales = New System.Windows.Forms.TextBox()
         Me.txtJimHighestSales = New System.Windows.Forms.TextBox()
         Me.txtJimLowestSales = New System.Windows.Forms.TextBox()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.lblTopSalesperson = New System.Windows.Forms.Label()
         Me.grpJim.SuspendLayout()
-        Me.grpDave.SuspendLayout()
+        Me.grpSky.SuspendLayout()
         Me.grpRob.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -162,16 +164,16 @@ Partial Class MainForm
         Me.txtJimSales.Name = "txtJimSales"
         Me.txtJimSales.ReadOnly = True
         Me.txtJimSales.Size = New System.Drawing.Size(80, 20)
-        Me.txtJimSales.TabIndex = 1
+        Me.txtJimSales.TabIndex = 99
         '
-        'txtDaveSales
+        'txtSkySales
         '
-        Me.txtDaveSales.Location = New System.Drawing.Point(729, 436)
-        Me.txtDaveSales.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtDaveSales.Name = "txtDaveSales"
-        Me.txtDaveSales.ReadOnly = True
-        Me.txtDaveSales.Size = New System.Drawing.Size(80, 20)
-        Me.txtDaveSales.TabIndex = 2
+        Me.txtSkySales.Location = New System.Drawing.Point(729, 436)
+        Me.txtSkySales.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtSkySales.Name = "txtSkySales"
+        Me.txtSkySales.ReadOnly = True
+        Me.txtSkySales.Size = New System.Drawing.Size(80, 20)
+        Me.txtSkySales.TabIndex = 101
         '
         'txtRobSales
         '
@@ -180,7 +182,7 @@ Partial Class MainForm
         Me.txtRobSales.Name = "txtRobSales"
         Me.txtRobSales.ReadOnly = True
         Me.txtRobSales.Size = New System.Drawing.Size(80, 20)
-        Me.txtRobSales.TabIndex = 3
+        Me.txtRobSales.TabIndex = 103
         '
         'txtJimPerc
         '
@@ -189,16 +191,16 @@ Partial Class MainForm
         Me.txtJimPerc.Name = "txtJimPerc"
         Me.txtJimPerc.ReadOnly = True
         Me.txtJimPerc.Size = New System.Drawing.Size(80, 20)
-        Me.txtJimPerc.TabIndex = 10
+        Me.txtJimPerc.TabIndex = 100
         '
-        'txtDavePerc
+        'txtSkyPerc
         '
-        Me.txtDavePerc.Location = New System.Drawing.Point(729, 470)
-        Me.txtDavePerc.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtDavePerc.Name = "txtDavePerc"
-        Me.txtDavePerc.ReadOnly = True
-        Me.txtDavePerc.Size = New System.Drawing.Size(80, 20)
-        Me.txtDavePerc.TabIndex = 10
+        Me.txtSkyPerc.Location = New System.Drawing.Point(729, 470)
+        Me.txtSkyPerc.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtSkyPerc.Name = "txtSkyPerc"
+        Me.txtSkyPerc.ReadOnly = True
+        Me.txtSkyPerc.Size = New System.Drawing.Size(80, 20)
+        Me.txtSkyPerc.TabIndex = 102
         '
         'txtRobPerc
         '
@@ -207,7 +209,7 @@ Partial Class MainForm
         Me.txtRobPerc.Name = "txtRobPerc"
         Me.txtRobPerc.ReadOnly = True
         Me.txtRobPerc.Size = New System.Drawing.Size(80, 20)
-        Me.txtRobPerc.TabIndex = 10
+        Me.txtRobPerc.TabIndex = 106
         '
         'btnCalc
         '
@@ -215,7 +217,7 @@ Partial Class MainForm
         Me.btnCalc.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(118, 62)
-        Me.btnCalc.TabIndex = 4
+        Me.btnCalc.TabIndex = 37
         Me.btnCalc.Text = "Calculate"
         Me.btnCalc.UseVisualStyleBackColor = True
         '
@@ -225,7 +227,7 @@ Partial Class MainForm
         Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(111, 62)
-        Me.btnExit.TabIndex = 5
+        Me.btnExit.TabIndex = 38
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -234,77 +236,77 @@ Partial Class MainForm
         Me.txtJimMar.Location = New System.Drawing.Point(267, 36)
         Me.txtJimMar.Name = "txtJimMar"
         Me.txtJimMar.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimMar.TabIndex = 35
+        Me.txtJimMar.TabIndex = 3
         '
         'txtJimJan
         '
         Me.txtJimJan.Location = New System.Drawing.Point(27, 36)
         Me.txtJimJan.Name = "txtJimJan"
         Me.txtJimJan.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimJan.TabIndex = 31
+        Me.txtJimJan.TabIndex = 1
         '
         'txtJimDec
         '
         Me.txtJimDec.Location = New System.Drawing.Point(267, 186)
         Me.txtJimDec.Name = "txtJimDec"
         Me.txtJimDec.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimDec.TabIndex = 46
+        Me.txtJimDec.TabIndex = 12
         '
         'txtJimSep
         '
         Me.txtJimSep.Location = New System.Drawing.Point(267, 136)
         Me.txtJimSep.Name = "txtJimSep"
         Me.txtJimSep.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimSep.TabIndex = 45
+        Me.txtJimSep.TabIndex = 9
         '
         'txtJimJun
         '
         Me.txtJimJun.Location = New System.Drawing.Point(267, 87)
         Me.txtJimJun.Name = "txtJimJun"
         Me.txtJimJun.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimJun.TabIndex = 44
+        Me.txtJimJun.TabIndex = 6
         '
         'txtJimNov
         '
         Me.txtJimNov.Location = New System.Drawing.Point(145, 186)
         Me.txtJimNov.Name = "txtJimNov"
         Me.txtJimNov.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimNov.TabIndex = 42
+        Me.txtJimNov.TabIndex = 11
         '
         'txtJimAug
         '
         Me.txtJimAug.Location = New System.Drawing.Point(145, 136)
         Me.txtJimAug.Name = "txtJimAug"
         Me.txtJimAug.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimAug.TabIndex = 41
+        Me.txtJimAug.TabIndex = 8
         '
         'txtJimMay
         '
         Me.txtJimMay.Location = New System.Drawing.Point(145, 87)
         Me.txtJimMay.Name = "txtJimMay"
         Me.txtJimMay.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimMay.TabIndex = 40
+        Me.txtJimMay.TabIndex = 5
         '
         'txtJimOct
         '
         Me.txtJimOct.Location = New System.Drawing.Point(23, 186)
         Me.txtJimOct.Name = "txtJimOct"
         Me.txtJimOct.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimOct.TabIndex = 38
+        Me.txtJimOct.TabIndex = 10
         '
         'txtJimJul
         '
         Me.txtJimJul.Location = New System.Drawing.Point(23, 136)
         Me.txtJimJul.Name = "txtJimJul"
         Me.txtJimJul.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimJul.TabIndex = 37
+        Me.txtJimJul.TabIndex = 7
         '
         'txtJimApr
         '
         Me.txtJimApr.Location = New System.Drawing.Point(23, 87)
         Me.txtJimApr.Name = "txtJimApr"
         Me.txtJimApr.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimApr.TabIndex = 36
+        Me.txtJimApr.TabIndex = 4
         '
         'grpJim
         '
@@ -317,10 +319,10 @@ Partial Class MainForm
         Me.grpJim.Controls.Add(Me.Label20)
         Me.grpJim.Controls.Add(Me.Label19)
         Me.grpJim.Controls.Add(Me.Label18)
-        Me.grpJim.Controls.Add(Me.Label17)
-        Me.grpJim.Controls.Add(Me.Label16)
-        Me.grpJim.Controls.Add(Me.Label15)
-        Me.grpJim.Controls.Add(Me.Label7)
+        Me.grpJim.Controls.Add(Me.lblJimApr)
+        Me.grpJim.Controls.Add(Me.lblJimMar)
+        Me.grpJim.Controls.Add(Me.lblJimFeb)
+        Me.grpJim.Controls.Add(Me.lblJimJan)
         Me.grpJim.Controls.Add(Me.txtJimFeb)
         Me.grpJim.Controls.Add(Me.txtJimNov)
         Me.grpJim.Controls.Add(Me.txtJimDec)
@@ -440,91 +442,91 @@ Partial Class MainForm
         Me.Label18.TabIndex = 76
         Me.Label18.Text = "May"
         '
-        'Label17
+        'lblJimApr
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(53, 71)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(27, 13)
-        Me.Label17.TabIndex = 75
-        Me.Label17.Text = "April"
+        Me.lblJimApr.AutoSize = True
+        Me.lblJimApr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJimApr.Location = New System.Drawing.Point(53, 71)
+        Me.lblJimApr.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblJimApr.Name = "lblJimApr"
+        Me.lblJimApr.Size = New System.Drawing.Size(27, 13)
+        Me.lblJimApr.TabIndex = 75
+        Me.lblJimApr.Text = "April"
         '
-        'Label16
+        'lblJimMar
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(295, 20)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(37, 13)
-        Me.Label16.TabIndex = 74
-        Me.Label16.Text = "March"
+        Me.lblJimMar.AutoSize = True
+        Me.lblJimMar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJimMar.Location = New System.Drawing.Point(295, 20)
+        Me.lblJimMar.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblJimMar.Name = "lblJimMar"
+        Me.lblJimMar.Size = New System.Drawing.Size(37, 13)
+        Me.lblJimMar.TabIndex = 74
+        Me.lblJimMar.Text = "March"
         '
-        'Label15
+        'lblJimFeb
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(170, 20)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(48, 13)
-        Me.Label15.TabIndex = 73
-        Me.Label15.Text = "Feburary"
+        Me.lblJimFeb.AutoSize = True
+        Me.lblJimFeb.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJimFeb.Location = New System.Drawing.Point(170, 20)
+        Me.lblJimFeb.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblJimFeb.Name = "lblJimFeb"
+        Me.lblJimFeb.Size = New System.Drawing.Size(48, 13)
+        Me.lblJimFeb.TabIndex = 73
+        Me.lblJimFeb.Text = "Feburary"
         '
-        'Label7
+        'lblJimJan
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(53, 20)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(44, 13)
-        Me.Label7.TabIndex = 72
-        Me.Label7.Text = "January"
+        Me.lblJimJan.AutoSize = True
+        Me.lblJimJan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJimJan.Location = New System.Drawing.Point(53, 20)
+        Me.lblJimJan.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblJimJan.Name = "lblJimJan"
+        Me.lblJimJan.Size = New System.Drawing.Size(44, 13)
+        Me.lblJimJan.TabIndex = 72
+        Me.lblJimJan.Text = "January"
         '
         'txtJimFeb
         '
         Me.txtJimFeb.Location = New System.Drawing.Point(145, 36)
         Me.txtJimFeb.Name = "txtJimFeb"
         Me.txtJimFeb.Size = New System.Drawing.Size(100, 29)
-        Me.txtJimFeb.TabIndex = 47
+        Me.txtJimFeb.TabIndex = 2
         '
-        'grpDave
+        'grpSky
         '
-        Me.grpDave.Controls.Add(Me.Label27)
-        Me.grpDave.Controls.Add(Me.txtDaveMay)
-        Me.grpDave.Controls.Add(Me.Label28)
-        Me.grpDave.Controls.Add(Me.txtDaveAug)
-        Me.grpDave.Controls.Add(Me.Label29)
-        Me.grpDave.Controls.Add(Me.txtDaveOct)
-        Me.grpDave.Controls.Add(Me.Label30)
-        Me.grpDave.Controls.Add(Me.txtDaveJul)
-        Me.grpDave.Controls.Add(Me.Label31)
-        Me.grpDave.Controls.Add(Me.txtDaveApr)
-        Me.grpDave.Controls.Add(Me.Label32)
-        Me.grpDave.Controls.Add(Me.txtDaveJun)
-        Me.grpDave.Controls.Add(Me.Label33)
-        Me.grpDave.Controls.Add(Me.txtDaveMar)
-        Me.grpDave.Controls.Add(Me.Label34)
-        Me.grpDave.Controls.Add(Me.txtDaveSep)
-        Me.grpDave.Controls.Add(Me.Label35)
-        Me.grpDave.Controls.Add(Me.txtDaveJan)
-        Me.grpDave.Controls.Add(Me.Label36)
-        Me.grpDave.Controls.Add(Me.txtDaveDec)
-        Me.grpDave.Controls.Add(Me.Label37)
-        Me.grpDave.Controls.Add(Me.txtDaveNov)
-        Me.grpDave.Controls.Add(Me.Label38)
-        Me.grpDave.Controls.Add(Me.txtDaveFeb)
-        Me.grpDave.Controls.Add(Me.Label39)
-        Me.grpDave.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpDave.Location = New System.Drawing.Point(476, 83)
-        Me.grpDave.Name = "grpDave"
-        Me.grpDave.Size = New System.Drawing.Size(375, 249)
-        Me.grpDave.TabIndex = 49
-        Me.grpDave.TabStop = False
-        Me.grpDave.Text = "Dave"
+        Me.grpSky.Controls.Add(Me.Label27)
+        Me.grpSky.Controls.Add(Me.txtSkyMay)
+        Me.grpSky.Controls.Add(Me.Label28)
+        Me.grpSky.Controls.Add(Me.txtSkyAug)
+        Me.grpSky.Controls.Add(Me.Label29)
+        Me.grpSky.Controls.Add(Me.txtSkyOct)
+        Me.grpSky.Controls.Add(Me.Label30)
+        Me.grpSky.Controls.Add(Me.txtSkyJul)
+        Me.grpSky.Controls.Add(Me.Label31)
+        Me.grpSky.Controls.Add(Me.txtSkyApr)
+        Me.grpSky.Controls.Add(Me.Label32)
+        Me.grpSky.Controls.Add(Me.txtSkyJun)
+        Me.grpSky.Controls.Add(Me.Label33)
+        Me.grpSky.Controls.Add(Me.txtSkyMar)
+        Me.grpSky.Controls.Add(Me.Label34)
+        Me.grpSky.Controls.Add(Me.txtSkySep)
+        Me.grpSky.Controls.Add(Me.Label35)
+        Me.grpSky.Controls.Add(Me.txtSkyJan)
+        Me.grpSky.Controls.Add(Me.Label36)
+        Me.grpSky.Controls.Add(Me.txtSkyDec)
+        Me.grpSky.Controls.Add(Me.Label37)
+        Me.grpSky.Controls.Add(Me.txtSkyNov)
+        Me.grpSky.Controls.Add(Me.Label38)
+        Me.grpSky.Controls.Add(Me.txtSkyFeb)
+        Me.grpSky.Controls.Add(Me.Label39)
+        Me.grpSky.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpSky.Location = New System.Drawing.Point(476, 83)
+        Me.grpSky.Name = "grpSky"
+        Me.grpSky.Size = New System.Drawing.Size(375, 249)
+        Me.grpSky.TabIndex = 49
+        Me.grpSky.TabStop = False
+        Me.grpSky.Text = "Sky"
         '
         'Label27
         '
@@ -537,12 +539,12 @@ Partial Class MainForm
         Me.Label27.TabIndex = 109
         Me.Label27.Text = "August"
         '
-        'txtDaveMay
+        'txtSkyMay
         '
-        Me.txtDaveMay.Location = New System.Drawing.Point(145, 87)
-        Me.txtDaveMay.Name = "txtDaveMay"
-        Me.txtDaveMay.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveMay.TabIndex = 90
+        Me.txtSkyMay.Location = New System.Drawing.Point(145, 87)
+        Me.txtSkyMay.Name = "txtSkyMay"
+        Me.txtSkyMay.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyMay.TabIndex = 17
         '
         'Label28
         '
@@ -555,12 +557,12 @@ Partial Class MainForm
         Me.Label28.TabIndex = 108
         Me.Label28.Text = "December"
         '
-        'txtDaveAug
+        'txtSkyAug
         '
-        Me.txtDaveAug.Location = New System.Drawing.Point(145, 136)
-        Me.txtDaveAug.Name = "txtDaveAug"
-        Me.txtDaveAug.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveAug.TabIndex = 91
+        Me.txtSkyAug.Location = New System.Drawing.Point(145, 136)
+        Me.txtSkyAug.Name = "txtSkyAug"
+        Me.txtSkyAug.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyAug.TabIndex = 20
         '
         'Label29
         '
@@ -573,12 +575,12 @@ Partial Class MainForm
         Me.Label29.TabIndex = 107
         Me.Label29.Text = "November"
         '
-        'txtDaveOct
+        'txtSkyOct
         '
-        Me.txtDaveOct.Location = New System.Drawing.Point(23, 186)
-        Me.txtDaveOct.Name = "txtDaveOct"
-        Me.txtDaveOct.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveOct.TabIndex = 89
+        Me.txtSkyOct.Location = New System.Drawing.Point(23, 186)
+        Me.txtSkyOct.Name = "txtSkyOct"
+        Me.txtSkyOct.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyOct.TabIndex = 22
         '
         'Label30
         '
@@ -591,12 +593,12 @@ Partial Class MainForm
         Me.Label30.TabIndex = 106
         Me.Label30.Text = "October"
         '
-        'txtDaveJul
+        'txtSkyJul
         '
-        Me.txtDaveJul.Location = New System.Drawing.Point(23, 136)
-        Me.txtDaveJul.Name = "txtDaveJul"
-        Me.txtDaveJul.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveJul.TabIndex = 88
+        Me.txtSkyJul.Location = New System.Drawing.Point(23, 136)
+        Me.txtSkyJul.Name = "txtSkyJul"
+        Me.txtSkyJul.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyJul.TabIndex = 19
         '
         'Label31
         '
@@ -609,12 +611,12 @@ Partial Class MainForm
         Me.Label31.TabIndex = 105
         Me.Label31.Text = "September"
         '
-        'txtDaveApr
+        'txtSkyApr
         '
-        Me.txtDaveApr.Location = New System.Drawing.Point(23, 87)
-        Me.txtDaveApr.Name = "txtDaveApr"
-        Me.txtDaveApr.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveApr.TabIndex = 87
+        Me.txtSkyApr.Location = New System.Drawing.Point(23, 87)
+        Me.txtSkyApr.Name = "txtSkyApr"
+        Me.txtSkyApr.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyApr.TabIndex = 16
         '
         'Label32
         '
@@ -627,12 +629,12 @@ Partial Class MainForm
         Me.Label32.TabIndex = 104
         Me.Label32.Text = " "
         '
-        'txtDaveJun
+        'txtSkyJun
         '
-        Me.txtDaveJun.Location = New System.Drawing.Point(267, 87)
-        Me.txtDaveJun.Name = "txtDaveJun"
-        Me.txtDaveJun.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveJun.TabIndex = 93
+        Me.txtSkyJun.Location = New System.Drawing.Point(267, 87)
+        Me.txtSkyJun.Name = "txtSkyJun"
+        Me.txtSkyJun.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyJun.TabIndex = 18
         '
         'Label33
         '
@@ -645,12 +647,12 @@ Partial Class MainForm
         Me.Label33.TabIndex = 103
         Me.Label33.Text = "July"
         '
-        'txtDaveMar
+        'txtSkyMar
         '
-        Me.txtDaveMar.Location = New System.Drawing.Point(267, 36)
-        Me.txtDaveMar.Name = "txtDaveMar"
-        Me.txtDaveMar.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveMar.TabIndex = 86
+        Me.txtSkyMar.Location = New System.Drawing.Point(267, 36)
+        Me.txtSkyMar.Name = "txtSkyMar"
+        Me.txtSkyMar.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyMar.TabIndex = 15
         '
         'Label34
         '
@@ -663,12 +665,12 @@ Partial Class MainForm
         Me.Label34.TabIndex = 102
         Me.Label34.Text = "June"
         '
-        'txtDaveSep
+        'txtSkySep
         '
-        Me.txtDaveSep.Location = New System.Drawing.Point(267, 136)
-        Me.txtDaveSep.Name = "txtDaveSep"
-        Me.txtDaveSep.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveSep.TabIndex = 94
+        Me.txtSkySep.Location = New System.Drawing.Point(267, 136)
+        Me.txtSkySep.Name = "txtSkySep"
+        Me.txtSkySep.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkySep.TabIndex = 21
         '
         'Label35
         '
@@ -681,12 +683,12 @@ Partial Class MainForm
         Me.Label35.TabIndex = 101
         Me.Label35.Text = "May"
         '
-        'txtDaveJan
+        'txtSkyJan
         '
-        Me.txtDaveJan.Location = New System.Drawing.Point(27, 36)
-        Me.txtDaveJan.Name = "txtDaveJan"
-        Me.txtDaveJan.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveJan.TabIndex = 85
+        Me.txtSkyJan.Location = New System.Drawing.Point(27, 36)
+        Me.txtSkyJan.Name = "txtSkyJan"
+        Me.txtSkyJan.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyJan.TabIndex = 13
         '
         'Label36
         '
@@ -699,12 +701,12 @@ Partial Class MainForm
         Me.Label36.TabIndex = 100
         Me.Label36.Text = "April"
         '
-        'txtDaveDec
+        'txtSkyDec
         '
-        Me.txtDaveDec.Location = New System.Drawing.Point(267, 186)
-        Me.txtDaveDec.Name = "txtDaveDec"
-        Me.txtDaveDec.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveDec.TabIndex = 95
+        Me.txtSkyDec.Location = New System.Drawing.Point(267, 186)
+        Me.txtSkyDec.Name = "txtSkyDec"
+        Me.txtSkyDec.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyDec.TabIndex = 24
         '
         'Label37
         '
@@ -717,12 +719,12 @@ Partial Class MainForm
         Me.Label37.TabIndex = 99
         Me.Label37.Text = "March"
         '
-        'txtDaveNov
+        'txtSkyNov
         '
-        Me.txtDaveNov.Location = New System.Drawing.Point(145, 186)
-        Me.txtDaveNov.Name = "txtDaveNov"
-        Me.txtDaveNov.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveNov.TabIndex = 92
+        Me.txtSkyNov.Location = New System.Drawing.Point(145, 186)
+        Me.txtSkyNov.Name = "txtSkyNov"
+        Me.txtSkyNov.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyNov.TabIndex = 23
         '
         'Label38
         '
@@ -735,12 +737,12 @@ Partial Class MainForm
         Me.Label38.TabIndex = 98
         Me.Label38.Text = "Feburary"
         '
-        'txtDaveFeb
+        'txtSkyFeb
         '
-        Me.txtDaveFeb.Location = New System.Drawing.Point(145, 36)
-        Me.txtDaveFeb.Name = "txtDaveFeb"
-        Me.txtDaveFeb.Size = New System.Drawing.Size(100, 29)
-        Me.txtDaveFeb.TabIndex = 96
+        Me.txtSkyFeb.Location = New System.Drawing.Point(145, 36)
+        Me.txtSkyFeb.Name = "txtSkyFeb"
+        Me.txtSkyFeb.Size = New System.Drawing.Size(100, 29)
+        Me.txtSkyFeb.TabIndex = 14
         '
         'Label39
         '
@@ -936,84 +938,84 @@ Partial Class MainForm
         Me.txtRobFeb.Location = New System.Drawing.Point(141, 36)
         Me.txtRobFeb.Name = "txtRobFeb"
         Me.txtRobFeb.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobFeb.TabIndex = 96
+        Me.txtRobFeb.TabIndex = 26
         '
         'txtRobNov
         '
         Me.txtRobNov.Location = New System.Drawing.Point(141, 186)
         Me.txtRobNov.Name = "txtRobNov"
         Me.txtRobNov.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobNov.TabIndex = 92
+        Me.txtRobNov.TabIndex = 35
         '
         'txtRobDec
         '
         Me.txtRobDec.Location = New System.Drawing.Point(263, 186)
         Me.txtRobDec.Name = "txtRobDec"
         Me.txtRobDec.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobDec.TabIndex = 95
+        Me.txtRobDec.TabIndex = 36
         '
         'txtRobJan
         '
         Me.txtRobJan.Location = New System.Drawing.Point(23, 36)
         Me.txtRobJan.Name = "txtRobJan"
         Me.txtRobJan.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobJan.TabIndex = 85
+        Me.txtRobJan.TabIndex = 25
         '
         'txtRobSep
         '
         Me.txtRobSep.Location = New System.Drawing.Point(263, 136)
         Me.txtRobSep.Name = "txtRobSep"
         Me.txtRobSep.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobSep.TabIndex = 94
+        Me.txtRobSep.TabIndex = 33
         '
         'txtRobMar
         '
         Me.txtRobMar.Location = New System.Drawing.Point(263, 36)
         Me.txtRobMar.Name = "txtRobMar"
         Me.txtRobMar.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobMar.TabIndex = 86
+        Me.txtRobMar.TabIndex = 27
         '
         'txtRobJun
         '
         Me.txtRobJun.Location = New System.Drawing.Point(263, 87)
         Me.txtRobJun.Name = "txtRobJun"
         Me.txtRobJun.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobJun.TabIndex = 93
+        Me.txtRobJun.TabIndex = 30
         '
         'txtRobApr
         '
         Me.txtRobApr.Location = New System.Drawing.Point(19, 87)
         Me.txtRobApr.Name = "txtRobApr"
         Me.txtRobApr.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobApr.TabIndex = 87
+        Me.txtRobApr.TabIndex = 28
         '
         'txtRobJul
         '
         Me.txtRobJul.Location = New System.Drawing.Point(19, 136)
         Me.txtRobJul.Name = "txtRobJul"
         Me.txtRobJul.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobJul.TabIndex = 88
+        Me.txtRobJul.TabIndex = 31
         '
         'txtRobOct
         '
         Me.txtRobOct.Location = New System.Drawing.Point(19, 186)
         Me.txtRobOct.Name = "txtRobOct"
         Me.txtRobOct.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobOct.TabIndex = 89
+        Me.txtRobOct.TabIndex = 34
         '
         'txtRobAug
         '
         Me.txtRobAug.Location = New System.Drawing.Point(141, 136)
         Me.txtRobAug.Name = "txtRobAug"
         Me.txtRobAug.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobAug.TabIndex = 91
+        Me.txtRobAug.TabIndex = 32
         '
         'txtRobMay
         '
         Me.txtRobMay.Location = New System.Drawing.Point(141, 87)
         Me.txtRobMay.Name = "txtRobMay"
         Me.txtRobMay.Size = New System.Drawing.Size(100, 29)
-        Me.txtRobMay.TabIndex = 90
+        Me.txtRobMay.TabIndex = 29
         '
         'Label1
         '
@@ -1033,9 +1035,9 @@ Partial Class MainForm
         Me.Label2.Location = New System.Drawing.Point(545, 434)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(180, 20)
+        Me.Label2.Size = New System.Drawing.Size(169, 20)
         Me.Label2.TabIndex = 53
-        Me.Label2.Text = "Dave - Total Year Sales:"
+        Me.Label2.Text = "Sky - Total Year Sales:"
         '
         'Label6
         '
@@ -1070,14 +1072,14 @@ Partial Class MainForm
         Me.Label3.TabIndex = 58
         Me.Label3.Text = "Jim - Total Year Sales:"
         '
-        'txtResults
+        'txtTotalSales
         '
-        Me.txtResults.Location = New System.Drawing.Point(591, 553)
-        Me.txtResults.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtResults.Name = "txtResults"
-        Me.txtResults.ReadOnly = True
-        Me.txtResults.Size = New System.Drawing.Size(80, 20)
-        Me.txtResults.TabIndex = 59
+        Me.txtTotalSales.Location = New System.Drawing.Point(591, 553)
+        Me.txtTotalSales.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTotalSales.Name = "txtTotalSales"
+        Me.txtTotalSales.ReadOnly = True
+        Me.txtTotalSales.Size = New System.Drawing.Size(80, 20)
+        Me.txtTotalSales.TabIndex = 59
         '
         'Label8
         '
@@ -1108,9 +1110,9 @@ Partial Class MainForm
         Me.Label11.Location = New System.Drawing.Point(500, 398)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(225, 20)
+        Me.Label11.Size = New System.Drawing.Size(214, 20)
         Me.Label11.TabIndex = 63
-        Me.Label11.Text = "Dave - Month of Lowest Sales:"
+        Me.Label11.Text = "Sky - Month of Lowest Sales:"
         '
         'Label12
         '
@@ -1119,9 +1121,9 @@ Partial Class MainForm
         Me.Label12.Location = New System.Drawing.Point(496, 366)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(229, 20)
+        Me.Label12.Size = New System.Drawing.Size(218, 20)
         Me.Label12.TabIndex = 62
-        Me.Label12.Text = "Dave - Month of Highest Sales:"
+        Me.Label12.Text = "Sky - Month of Highest Sales:"
         '
         'Label13
         '
@@ -1145,23 +1147,23 @@ Partial Class MainForm
         Me.Label14.TabIndex = 64
         Me.Label14.Text = "Rob - Month of Highest Sales:"
         '
-        'txtDaveHighestSales
+        'txtSkyHighestSales
         '
-        Me.txtDaveHighestSales.Location = New System.Drawing.Point(729, 366)
-        Me.txtDaveHighestSales.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtDaveHighestSales.Name = "txtDaveHighestSales"
-        Me.txtDaveHighestSales.ReadOnly = True
-        Me.txtDaveHighestSales.Size = New System.Drawing.Size(80, 20)
-        Me.txtDaveHighestSales.TabIndex = 66
+        Me.txtSkyHighestSales.Location = New System.Drawing.Point(729, 366)
+        Me.txtSkyHighestSales.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtSkyHighestSales.Name = "txtSkyHighestSales"
+        Me.txtSkyHighestSales.ReadOnly = True
+        Me.txtSkyHighestSales.Size = New System.Drawing.Size(80, 20)
+        Me.txtSkyHighestSales.TabIndex = 66
         '
-        'txtDaveLowestSales
+        'txtSkyLowestSales
         '
-        Me.txtDaveLowestSales.Location = New System.Drawing.Point(729, 402)
-        Me.txtDaveLowestSales.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtDaveLowestSales.Name = "txtDaveLowestSales"
-        Me.txtDaveLowestSales.ReadOnly = True
-        Me.txtDaveLowestSales.Size = New System.Drawing.Size(80, 20)
-        Me.txtDaveLowestSales.TabIndex = 67
+        Me.txtSkyLowestSales.Location = New System.Drawing.Point(729, 402)
+        Me.txtSkyLowestSales.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtSkyLowestSales.Name = "txtSkyLowestSales"
+        Me.txtSkyLowestSales.ReadOnly = True
+        Me.txtSkyLowestSales.Size = New System.Drawing.Size(80, 20)
+        Me.txtSkyLowestSales.TabIndex = 67
         '
         'txtRobHighestSales
         '
@@ -1199,38 +1201,59 @@ Partial Class MainForm
         Me.txtJimLowestSales.Size = New System.Drawing.Size(80, 20)
         Me.txtJimLowestSales.TabIndex = 71
         '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Location = New System.Drawing.Point(209, 547)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(138, 20)
+        Me.Label53.TabIndex = 107
+        Me.Label53.Text = "Top Sales Person:"
+        '
+        'lblTopSalesperson
+        '
+        Me.lblTopSalesperson.AutoSize = True
+        Me.lblTopSalesperson.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTopSalesperson.Location = New System.Drawing.Point(350, 547)
+        Me.lblTopSalesperson.Name = "lblTopSalesperson"
+        Me.lblTopSalesperson.Size = New System.Drawing.Size(0, 20)
+        Me.lblTopSalesperson.TabIndex = 108
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1333, 640)
+        Me.Controls.Add(Me.lblTopSalesperson)
+        Me.Controls.Add(Me.Label53)
         Me.Controls.Add(Me.txtJimLowestSales)
         Me.Controls.Add(Me.txtJimHighestSales)
         Me.Controls.Add(Me.txtRobLowestSales)
         Me.Controls.Add(Me.txtRobHighestSales)
-        Me.Controls.Add(Me.txtDaveLowestSales)
-        Me.Controls.Add(Me.txtDaveHighestSales)
+        Me.Controls.Add(Me.txtSkyLowestSales)
+        Me.Controls.Add(Me.txtSkyHighestSales)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtResults)
+        Me.Controls.Add(Me.txtTotalSales)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.grpRob)
-        Me.Controls.Add(Me.grpDave)
+        Me.Controls.Add(Me.grpSky)
         Me.Controls.Add(Me.grpJim)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCalc)
         Me.Controls.Add(Me.txtRobPerc)
         Me.Controls.Add(Me.txtRobSales)
-        Me.Controls.Add(Me.txtDavePerc)
-        Me.Controls.Add(Me.txtDaveSales)
+        Me.Controls.Add(Me.txtSkyPerc)
+        Me.Controls.Add(Me.txtSkySales)
         Me.Controls.Add(Me.txtJimPerc)
         Me.Controls.Add(Me.txtJimSales)
         Me.Controls.Add(Me.Label5)
@@ -1240,8 +1263,8 @@ Partial Class MainForm
         Me.Text = "Sales Calculator"
         Me.grpJim.ResumeLayout(False)
         Me.grpJim.PerformLayout()
-        Me.grpDave.ResumeLayout(False)
-        Me.grpDave.PerformLayout()
+        Me.grpSky.ResumeLayout(False)
+        Me.grpSky.PerformLayout()
         Me.grpRob.ResumeLayout(False)
         Me.grpRob.PerformLayout()
         Me.ResumeLayout(False)
@@ -1251,10 +1274,10 @@ Partial Class MainForm
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents txtJimSales As TextBox
-    Friend WithEvents txtDaveSales As TextBox
+    Friend WithEvents txtSkySales As TextBox
     Friend WithEvents txtRobSales As TextBox
     Friend WithEvents txtJimPerc As TextBox
-    Friend WithEvents txtDavePerc As TextBox
+    Friend WithEvents txtSkyPerc As TextBox
     Friend WithEvents txtRobPerc As TextBox
     Friend WithEvents btnCalc As Button
     Friend WithEvents btnExit As Button
@@ -1270,22 +1293,22 @@ Partial Class MainForm
     Friend WithEvents txtJimJul As New System.Windows.Forms.TextBox
     Friend WithEvents txtJimApr As New System.Windows.Forms.TextBox
     Friend WithEvents grpJim As GroupBox
-    Friend WithEvents grpDave As GroupBox
+    Friend WithEvents grpSky As GroupBox
     Friend WithEvents grpRob As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtResults As TextBox
+    Friend WithEvents txtTotalSales As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents txtDaveHighestSales As TextBox
-    Friend WithEvents txtDaveLowestSales As TextBox
+    Friend WithEvents txtSkyHighestSales As TextBox
+    Friend WithEvents txtSkyLowestSales As TextBox
     Friend WithEvents txtRobHighestSales As TextBox
     Friend WithEvents txtRobLowestSales As TextBox
     Friend WithEvents txtJimHighestSales As TextBox
@@ -1299,35 +1322,35 @@ Partial Class MainForm
     Friend WithEvents Label20 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblJimApr As Label
+    Friend WithEvents lblJimMar As Label
+    Friend WithEvents lblJimFeb As Label
+    Friend WithEvents lblJimJan As Label
     Friend WithEvents txtJimFeb As TextBox
     Friend WithEvents Label27 As Label
-    Friend WithEvents txtDaveMay As TextBox
+    Friend WithEvents txtSkyMay As TextBox
     Friend WithEvents Label28 As Label
-    Friend WithEvents txtDaveAug As TextBox
+    Friend WithEvents txtSkyAug As TextBox
     Friend WithEvents Label29 As Label
-    Friend WithEvents txtDaveOct As TextBox
+    Friend WithEvents txtSkyOct As TextBox
     Friend WithEvents Label30 As Label
-    Friend WithEvents txtDaveJul As TextBox
+    Friend WithEvents txtSkyJul As TextBox
     Friend WithEvents Label31 As Label
-    Friend WithEvents txtDaveApr As TextBox
+    Friend WithEvents txtSkyApr As TextBox
     Friend WithEvents Label32 As Label
-    Friend WithEvents txtDaveJun As TextBox
+    Friend WithEvents txtSkyJun As TextBox
     Friend WithEvents Label33 As Label
-    Friend WithEvents txtDaveMar As TextBox
+    Friend WithEvents txtSkyMar As TextBox
     Friend WithEvents Label34 As Label
-    Friend WithEvents txtDaveSep As TextBox
+    Friend WithEvents txtSkySep As TextBox
     Friend WithEvents Label35 As Label
-    Friend WithEvents txtDaveJan As TextBox
+    Friend WithEvents txtSkyJan As TextBox
     Friend WithEvents Label36 As Label
-    Friend WithEvents txtDaveDec As TextBox
+    Friend WithEvents txtSkyDec As TextBox
     Friend WithEvents Label37 As Label
-    Friend WithEvents txtDaveNov As TextBox
+    Friend WithEvents txtSkyNov As TextBox
     Friend WithEvents Label38 As Label
-    Friend WithEvents txtDaveFeb As TextBox
+    Friend WithEvents txtSkyFeb As TextBox
     Friend WithEvents Label39 As Label
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
@@ -1354,4 +1377,6 @@ Partial Class MainForm
     Friend WithEvents txtRobOct As TextBox
     Friend WithEvents txtRobAug As TextBox
     Friend WithEvents txtRobMay As TextBox
+    Friend WithEvents Label53 As Label
+    Friend WithEvents lblTopSalesperson As Label
 End Class
