@@ -59,35 +59,7 @@ Public Class MainForm
 
 
 
-    'Private Function GetSalesData(salesPerson As String) As Dictionary(Of String, Integer)
-    '    Return salesData(salesPerson)
-    'End Function
 
-    'Private Function GetTotalSales(salesPerson As String) As Integer
-    '    Return GetSalesData(salesPerson).Values.Sum()
-    'End Function
-
-    'Private Function GetHighestSalesMonth(salesPerson As String) As String
-    '    Return GetSalesData(salesPerson).Aggregate(Function(x, y) If(x.Value > y.Value, x, y)).Key
-    'End Function
-
-    'Private Function GetLowestSalesMonth(salesPerson As String) As String
-    '    Return GetSalesData(salesPerson).Aggregate(Function(x, y) If(x.Value < y.Value, x, y)).Key
-    'End Function
-
-
-
-
-
-
-
-
-    'Private Sub txtBox_TextChanged(sender As Object, e As EventArgs) Handles txtJimJan.TextChanged, txtJimFeb.TextChanged, txtJimMar.TextChanged, txtJimApr.TextChanged, txtJimMay.TextChanged, txtJimJun.TextChanged, txtJimJul.TextChanged, txtJimAug.TextChanged, txtJimSep.TextChanged, txtJimOct.TextChanged, txtJimNov.TextChanged, txtJimDec.TextChanged,
-    'txtSkyJan.TextChanged, txtSkyFeb.TextChanged, txtSkyMar.TextChanged, txtSkyApr.TextChanged, txtSkyMay.TextChanged, txtSkyJun.TextChanged, txtSkyJul.TextChanged, txtSkyAug.TextChanged, txtSkySep.TextChanged, txtSkyOct.TextChanged, txtSkyNov.TextChanged, txtSkyDec.TextChanged,
-    'txtRobJan.TextChanged, txtRobFeb.TextChanged, txtRobMar.TextChanged, txtRobApr.TextChanged, txtRobMay.TextChanged, txtRobJun.TextChanged, txtRobJul.TextChanged, txtRobAug.TextChanged, txtRobSep.TextChanged, txtRobOct.TextChanged, txtRobNov.TextChanged, txtRobDec.TextChanged
-
-
-    'End Sub
 
 
 
@@ -130,20 +102,29 @@ Public Class MainForm
 
 
                 ' Validate the input and convert it to an integer
-                If Integer.TryParse(txtBox.Text, sales) AndAlso sales >= 0 Then
-                    If monthSales.ContainsKey(month) Then
-                        monthSales(month) = sales
+                If Integer.TryParse(txtBox.Text.Trim(), sales) Then
+                    If sales < 0 Then
+                        txtBox.Text = ""
+                        MessageBox.Show($"Invalid input for {salesPerson} - {month}. Please enter a positive integer, blank boxes will be interpreted as a 0")
                     Else
-                        monthSales.Add(month, sales)
+                        If monthSales.ContainsKey(month) Then
+                            monthSales(month) = sales
+                        Else
+                            monthSales.Add(month, sales)
+                        End If
                     End If
                 Else
-                    txtBox.Text = ""
-                    MessageBox.Show($"Invalid input for {salesPerson} - {month}. Please enter a positive integer.")
+                    txtBox.Text = "0"
+                    If Not String.IsNullOrWhiteSpace(txtBox.Text) Then
+                        MessageBox.Show($"Invalid input for {salesPerson} - {month}. Please enter a positive integer, blank boxes will be interpreted as a 0")
+                    End If
                 End If
+
+
+                ' Add the sales data for the salesperson to the dictionary
+                salesData(salesPerson) = monthSales
             Next
 
-            ' Add the sales data for the salesperson to the dictionary
-            salesData(salesPerson) = monthSales
         Next
     End Function
 
@@ -173,23 +154,45 @@ Public Class MainForm
 
     Private Sub updateData()
         ' Update Jim's sales data
-        jimData = salesData("Jim")
-        txtJimSales.Text = jimData.Values.Sum().ToString()
-        txtJimHighestSales.Text = jimData.Aggregate(Function(x, y) If(x.Value > y.Value, x, y)).Key
-        txtJimLowestSales.Text = jimData.Aggregate(Function(x, y) If(x.Value < y.Value, x, y)).Key
+        If salesData.ContainsKey("Jim") AndAlso salesData("Jim").Count > 0 Then
+            jimData = salesData("Jim")
+            txtJimSales.Text = jimData.Values.Sum().ToString()
+            txtJimHighestSales.Text = jimData.Aggregate(Function(x, y) If(x.Value > y.Value, x, y)).Key
+            txtJimLowestSales.Text = jimData.Aggregate(Function(x, y) If(x.Value < y.Value, x, y)).Key
+        Else
+            ' If Jim's data is missing, clear the text boxes
+            txtJimSales.Text = ""
+            txtJimHighestSales.Text = ""
+            txtJimLowestSales.Text = ""
+        End If
 
         ' Update Sky's sales data
-        skyData = salesData("Sky")
-        txtSkySales.Text = skyData.Values.Sum().ToString()
-        txtSkyHighestSales.Text = skyData.Aggregate(Function(x, y) If(x.Value > y.Value, x, y)).Key
-        txtSkyLowestSales.Text = skyData.Aggregate(Function(x, y) If(x.Value < y.Value, x, y)).Key
+        If salesData.ContainsKey("Sky") AndAlso salesData("Sky").Count > 0 Then
+            skyData = salesData("Sky")
+            txtSkySales.Text = skyData.Values.Sum().ToString()
+            txtSkyHighestSales.Text = skyData.Aggregate(Function(x, y) If(x.Value > y.Value, x, y)).Key
+            txtSkyLowestSales.Text = skyData.Aggregate(Function(x, y) If(x.Value < y.Value, x, y)).Key
+        Else
+            ' If Sky's data is missing, clear the text boxes
+            txtSkySales.Text = ""
+            txtSkyHighestSales.Text = ""
+            txtSkyLowestSales.Text = ""
+        End If
 
         ' Update Rob's sales data
-        robData = salesData("Rob")
-        txtRobSales.Text = robData.Values.Sum().ToString()
-        txtRobHighestSales.Text = robData.Aggregate(Function(x, y) If(x.Value > y.Value, x, y)).Key
-        txtRobLowestSales.Text = robData.Aggregate(Function(x, y) If(x.Value < y.Value, x, y)).Key
+        If salesData.ContainsKey("Rob") AndAlso salesData("Rob").Count > 0 Then
+            robData = salesData("Rob")
+            txtRobSales.Text = robData.Values.Sum().ToString()
+            txtRobHighestSales.Text = robData.Aggregate(Function(x, y) If(x.Value > y.Value, x, y)).Key
+            txtRobLowestSales.Text = robData.Aggregate(Function(x, y) If(x.Value < y.Value, x, y)).Key
+        Else
+            ' If Rob's data is missing, clear the text boxes
+            txtRobSales.Text = ""
+            txtRobHighestSales.Text = ""
+            txtRobLowestSales.Text = ""
+        End If
     End Sub
+
 
 
 
@@ -281,20 +284,6 @@ Public Class MainForm
         Next
 
 
-        '' Highlight the percentage text box for the current salesperson
-        'For Each grpBox As GroupBox In Me.Controls.OfType(Of GroupBox)()
-        '    salesPerson = grpBox.Name.Substring(3) ' Extract the salesperson's name from the group box name
-        '    txtBoxPercentage = Me.Controls.Find($"txt{salesPerson}Perc", True).FirstOrDefault()
-        '    If txtBoxPercentage IsNot Nothing Then
-        '        txtBoxPercentage.BackColor = If(topPerformers.Any(Function(x) x = salesPerson), Color.Yellow, SystemColors.Window)
-        '    End If
-
-        '    txtBoxTotalSalesPerc = Me.Controls.Find($"txt{salesPerson}TotalSalesPerc", True).FirstOrDefault()
-
-        '    If txtBoxTotalSalesPerc IsNot Nothing Then
-        '        txtBoxTotalSalesPerc.BackColor = If(salesData.ContainsKey(salesPerson) AndAlso salesData(salesPerson).Values.Sum() < minimumSalesAmount OrElse percentage < minimumSalesPercentage, Color.Red, SystemColors.Window)
-        '    End If
-        'Next
     End Sub
 
 
